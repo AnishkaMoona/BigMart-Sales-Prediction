@@ -1,2 +1,2 @@
-# BigMart-Sales-Prediction
-ML Project: To predict Big Mart Sales Prediction, deployed app on Django
+# Loan_Prediction_App
+ML Project: To predict the status of loan approval, built webapp using streamlit, deployed app on Heroku.
