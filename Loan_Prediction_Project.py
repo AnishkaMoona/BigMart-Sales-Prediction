@@ -258,7 +258,7 @@ def main():
                 st.write('Accuracy score with Random Forest is ' + str(rf_score))
                 st.write('A single tree in Random forest with max depth 10 and n_estimators = 100: ')
 
-                fig = plt.figure(figsize=(50,50))
+                fig = plt.figure(figsize=(20,20))
                 _ = tree.plot_tree(model_rf.estimators_[1], class_names= x_train.columns,filled=True)
         
                 plt.axis('off')
@@ -269,6 +269,7 @@ def main():
                 """Performance Measures: Test Data Accuracy and Confusion Matrix"""
 
                 y_pred_test = model_rf.predict(x_test)
+                fig = plt.figure(figsize=(5,5))
                 confusion_matrix = pd.crosstab(y_test, y_pred_test, rownames=['Actual'],colnames=['Predicted'])
                 sns.heatmap(confusion_matrix,annot=True)
                 st.pyplot()
